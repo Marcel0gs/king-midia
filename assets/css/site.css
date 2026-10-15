@@ -7,7 +7,9 @@
    Tema escuro, como o perfil do Instagram.
    ===================================================================== */
 
-@property --furo { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+/* o furo nasce em -1%, não em 0%: com 0% a borda suave (0 a .5%) deixava um
+   ponto transparente no centro da tela a abertura inteira (ele viu, 15/10/2026) */
+@property --furo { syntax: "<percentage>"; inherits: false; initial-value: -1%; }
 
 :root {
   --fundo: #07030F;
